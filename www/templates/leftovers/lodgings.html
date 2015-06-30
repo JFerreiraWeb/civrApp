@@ -1,0 +1,102 @@
+  /*$scope.lodgings = [];
+
+  $http.get('http://www.civr.pt/category/app-alojamento/?json=1')
+  .success(function(response) {
+    angular.forEach(response.posts, function(post){
+      $scope.lodgings.push(post);*/
+
+  $scope.posts = [];
+  $scope.page = 1;
+  $scope.loadMore = function() {
+    $http.get('http://www.civr.pt/category/app-alojamento/page/'+$scope.page).success(function(items) {
+      var i = items.posts.length;
+      $scope.posts = $scope.posts.concat(items.posts);
+      $scope.posts.push(items);
+        console.log(items.posts[0]);
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+        console.log($scope.page);
+        $scope.page +=1;
+
+
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $scope. lodgings = [];
+  $scope.page=1;
+  $scope.loadMore = function() {
+    $http.get('http://wallweight.com/api/get_recent_posts?page='+$scope.page).success(function(items) {
+     var i = items.posts.length;
+     $scope.lodgings = $scope.lodgings.concat(items.lodgings);
+     $scope.lodgings.push(items);
+      console.log(items.posts[0]);
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+      console.log($scope.page);
+      $scope.page +=1;
+    });
+  };
+
+
+
+  
+    }
+
+    $scope.page = 1;
+
+    
+
+    $http.get('http://www.civr.pt/category/app-alojamento/page/'+$scope.page+'?json=1');
+    .success(function(data, status, headers, config) {
+
+        $scope.posts = data.posts;
+        console.log(data);
+    }
+)
+
+
+    .error(function(data, status, headers, config) {
+
+    });
+
+    });
+app.controller('LoadMoreLodgingCtrl', function($scope, $http) {
+  $scope.posts = [];
+  $scope.page=1;
+  $scope.loadMore = function() {
+    $http.get('http://www.civr.pt/category/app-alojamento/page/'+$scope.page+'?json=1').success(function(items) {
+   var i = items.posts.length;
+   $scope.posts = $scope.posts.concat(items.posts);
+   $scope.posts.push(items);
+    console.log(items.posts[0]);
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+    console.log($scope.page);
+    $scope.page +=1;
+    });
+  };
+});
+
+
+ $scope.userPhoto = photo.user.id;
+          $http.get('https://api.instagram.com/v1/users/'+$scope.userPhoto+'/?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df')
+          .sucess(function(responseUser){
+            $scope.photoUserReady = responseUser.user.profile_picture;
+
+
+
+          });

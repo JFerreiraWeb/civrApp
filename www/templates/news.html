@@ -1,0 +1,16 @@
+<ion-view view-title="Notícias">
+<ion-content>
+      <div class="list">
+      <a class="item item-thumbnail-left" ng-click="openLink(new.url)" ng-repeat="new in news track by new.id">
+        <img ng-src="{{new.thumbnail}}" ng-if="new.thumbnail.startsWith('http')">
+        <h2 class="newTitle">{{new.title}}</h2>
+         <div data-ng-bind-html="new.excerpt" class="newResumo"></div>
+         <p><span am-time-ago="new.date"></span></p>
+    </a>
+    </div>
+      <ion-infinite-scroll ng-if="!noMoreItemsAvailable"
+        on-infinite="loadMoreNews()"
+        distance="1%">
+      </ion-infinite-scroll>
+      </ion-content>
+    </ion-view>
