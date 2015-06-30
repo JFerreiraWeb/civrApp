@@ -1,7 +1,34 @@
 (function (){
 //função anónima
 
-  var app = angular.module('app', ['ionic','angularMoment']);
+  var app = angular.module('app', ['ionic','angularMoment'])
+
+  .factory('PersonService', function($http){
+  var BASE_URL = "https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df";
+  var items = [];
+  
+  return {
+    GetFeed: function(){
+      return $http.get(BASE_URL+'&count=10').then(function(response){
+        items = response.data;
+        return items;
+      });
+    },
+    GetNewPhotos: function(){
+      return $http.get(BASE_URL+'&count=2').then(function(response){
+        items = response.data;
+        return items;
+      });
+    },
+    GetOldPhotos: function(){
+      return $http.get(BASE_URL+'&count=10').then(function(response){
+        items = response.data;
+        return items;
+      });
+    }
+  }
+});
+
 
 
   //definir controlador dos mapas
@@ -165,8 +192,59 @@ $scope.openLink = function(url){
   };
   });
 
+
+
+
+//definir controlador do feed do instagram
+app.controller('CivrInstagramController', function($scope, $timeout, PersonService) {
+  $scope.items = [];
+  $scope.newItems = [];
+  
+  PersonService.GetFeed().then(function(items){
+  $scope.items = items;
+  });
+  
+  $scope.doRefresh = function() {
+    if($scope.newItems.length > 0){
+      $scope.items = $scope.newItems.concat($scope.items);
+        
+      //Stop the ion-refresher from spinning
+      $scope.$broadcast('scroll.refreshComplete');
+      
+      $scope.newItems = [];
+    } else {
+      PersonService.GetNewPhotos().then(function(items){
+        $scope.items = items.concat($scope.items);
+        
+        //Stop the ion-refresher from spinning
+        $scope.$broadcast('scroll.refreshComplete');
+      });
+    }
+  };
+  
+  $scope.loadMore = function(){
+    PersonService.GetOldPhotos().then(function(items) {
+      $scope.items = $scope.items.concat(items);
+    
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+    });
+  };
+  
+   var CheckNewItems = function(){
+    $timeout(function(){
+      PersonService.GetNewPhotos().then(function(items){
+        $scope.newItems = items.concat($scope.newItems);
+      
+        CheckNewItems();
+      });
+    },10000);
+   }
+  
+  CheckNewItems();
+});
+
      //definir controlador do feed de instagram
-  app.controller('CivrInstagramController', function($http, $scope) {
+  /*app.controller('CivrInstagramController', function($http, $scope) {
 
      $scope.photos = [];
      $scope.userPhoto= 0;
@@ -186,7 +264,7 @@ $scope.openLink = function(url){
         });
       });
 });
-
+*/
    
 
 
