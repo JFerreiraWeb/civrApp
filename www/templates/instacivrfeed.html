@@ -3,10 +3,10 @@
 <ion-refresher on-refresh="doRefresh()"></ion-refresher>
 <div class="list card" ng-repeat="item in items">
   <ion-item ng-if="newItems.length > 0" ng-click="doRefresh()">
-  {{newItems.length}} novas fotos!
+  {{newItems.length}} novas fotos!</ion-item>
   <div class="item item-avatar">
     <img ng-src="{{item.user.profile_picture}}" ng-if="item.user.profile_picture.startsWith('https')">
-    <h2>{{photo.user.full_name}}</h2>
+    <h2>{{item.user.full_name}}</h2>
     <p><span am-time-ago="item.created_time" am-preprocess="unix"></span></p>
   </div>
 

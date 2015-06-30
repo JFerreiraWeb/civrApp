@@ -6,6 +6,7 @@
   .factory('PersonService', function($http){
   var BASE_URL = "https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df";
   var items = [];
+  var nextPage = [];
   
   return {
     GetFeed: function(){
@@ -21,13 +22,23 @@
       });
     },
     GetOldPhotos: function(){
-      return $http.get(BASE_URL+'&count=10').then(function(response){
-        items = response.data;
-        return items;
-      });
-    }
-  }
-});
+      return $http.get(BASE_URL+'&count=10').then(function(response_){
+        nextPage = response_.pagination.next_url;
+        return nextPage;
+      })
+        .then(function(response__){
+          return $http.get(nextPage).then(function(response){
+            item=response.data;
+
+
+          });
+
+
+        });
+    
+    
+  },
+}});
 
 
 
@@ -194,7 +205,6 @@ $scope.openLink = function(url){
 
 
 
-
 //definir controlador do feed do instagram
 app.controller('CivrInstagramController', function($scope, $timeout, PersonService) {
   $scope.items = [];
@@ -243,8 +253,19 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
   CheckNewItems();
 });
 
-     //definir controlador do feed de instagram
-  /*app.controller('CivrInstagramController', function($http, $scope) {
+
+
+
+
+
+
+
+
+
+
+
+   /*  //definir controlador do feed de instagram
+  app.controller('CivrInstagramController', function($http, $scope) {
 
      $scope.photos = [];
      $scope.userPhoto= 0;
@@ -264,8 +285,8 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
         });
       });
 });
-*/
-   
+
+   */
 
 
 
