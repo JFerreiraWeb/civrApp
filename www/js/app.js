@@ -1,9 +1,9 @@
 (function (){
 //função anónima
 
-  var app = angular.module('app', ['ionic','angularMoment'])
+  var app = angular.module('app', ['ionic','angularMoment']);
 
-  .factory('PersonService', function($http){
+  app.factory('PersonService', function($http){
   var BASE_URL = "https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df";
   var items = [];
   var nextPage = [];
@@ -25,7 +25,7 @@
       return $http.get(BASE_URL+'&count=10').then(function(response_){
         nextPage = response_.pagination.next_url;
         return nextPage;
-      })
+      
         .then(function(response__){
           return $http.get(nextPage).then(function(response){
             item=response.data;
@@ -39,6 +39,7 @@
     
   },
 }});
+});
 
 
 
