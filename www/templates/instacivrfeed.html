@@ -1,19 +1,16 @@
-<ion-view view-title="#CircuitoVilaReal Fotos!">
+<ion-view view-title="#CircuitoVilaReal">
 <ion-content>
-<ion-refresher on-refresh="doRefresh()"></ion-refresher>
-<div class="list card" ng-repeat="item in items">
-  <ion-item ng-if="newItems.length > 0" ng-click="doRefresh()">
-  {{newItems.length}} novas fotos!</ion-item>
+<div class="list card" ng-repeat="photo in photos track by photo.id">
   <div class="item item-avatar">
-    <img ng-src="{{item.user.profile_picture}}" ng-if="item.user.profile_picture.startsWith('https')">
-    <h2>{{item.user.full_name}}</h2>
-    <p><span am-time-ago="item.created_time" am-preprocess="unix"></span></p>
+    <img ng-src="{{photo.user.profile_picture}}" ng-if="photo.user.profile_picture.startsWith('https')">
+    <h2>{{photo.user.full_name}}</h2>
+    <p><span am-time-ago="photo.created_time" am-preprocess="unix"></span></p>
   </div>
 
   <div class="item item-body" >
-    <img ng-src="{{item.images.low_resolution.url}}" ng-if="item.images.low_resolution.url.startsWith('https')">
+    <img ng-src="{{photo.images.low_resolution.url}}" ng-if="photo.images.low_resolution.url.startsWith('https')">
     <p>
-      {{item.caption.text}}
+      {{photo.caption.text}}
     </p>
     <p>
       <a href="#" class="subdued">1 Like</a>
@@ -22,6 +19,5 @@
   </div>
 
 </div>
-<ion-infinite-scroll on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
 </ion-content>
 </ion-view>

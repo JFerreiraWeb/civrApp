@@ -2,7 +2,7 @@
 //função anónima
 
   var app = angular.module('app', ['ionic','angularMoment']);
-
+/*
   app.factory('PersonService', function($http){
   var BASE_URL = "https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df";
   var items = [];
@@ -39,8 +39,31 @@
     
   },
 }});
-});
+});*/
+//definir controlador dos horarios
+app.controller('scheduleController', function($http, $scope) {
 
+
+$scope.horarioDay1 = 'http://www.elevar.eu/civrApp/horario/day1.pdf';
+$scope.horarioDay2 = 'http://www.elevar.eu/civrApp/horario/day2.pdf';
+$scope.horarioDay3 = 'http://www.elevar.eu/civrApp/horario/day3.pdf';
+
+
+
+ $scope.openLink = function (url, link_type) {
+   console.log(url);
+            if (ionic.Platform.isAndroid()) {
+
+                if (link_type !== undefined && link_type !== null) {
+                    if (link_type.toLowerCase() !== 'html') {
+                        url = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url);
+                    }
+                }
+            }
+
+            window.open(url, '_blank', 'location=no');
+        }
+});
 
 
   //definir controlador dos mapas
@@ -205,8 +228,101 @@ $scope.openLink = function(url){
   });
 
 
+//definir controlador das bancadas
+app.controller('bancadasController', function($scope) {
+
+   $scope.navigate=function(lat, lng) {
+    // If it's an iPhone..
+    if ((navigator.platform.indexOf("iPhone") !== -1) || (navigator.platform.indexOf("iPod") !== -1)) {
+      function iOSversion() {
+        if (/iP(hone|od|ad)/.test(navigator.platform)) {
+          // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+          var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+          return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+        }
+      }
+      var ver = iOSversion() || [0];
+
+      if (ver[0] >= 6) {
+        protocol = 'maps://';
+      } else {
+        protocol = 'http://';
+
+      }
+      window.location = protocol + 'maps.apple.com/maps?daddr=' + lat + ',' + lng + '&amp;ll=';
+    }
+    else {
+      window.open('http://maps.google.com?daddr=' + lat + ',' + lng + '&amp;ll=', '_blank','location=yes');
+    }
+  }
+
+
+});
+
+
 
 //definir controlador do feed do instagram
+app.controller('CivrInstagramController', function($http, $scope) {
+
+     $scope.photos = [];
+     $scope.userPhoto= 0;
+     $scope.photoUserReady = 0;
+
+      $http.get("https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df")
+      .success(function(response) {
+
+        console.log(response);
+
+        angular.forEach(response.data, function(photo){
+          $scope.photos.push(photo);
+         
+
+        });
+
+      $scope.loadMorePhotos = function (){
+
+      if ($scope.photos.length>0){
+      $scope.page = $scope.page + 1;
+      $scope.pagesLoaded = $scope.pagesLoaded+1;
+
+      }
+      $http.get('http://www.civr.pt/category/app-noticias/?json=get_recent_posts&page='+$scope.page)
+      .success(function(response){
+
+
+        angular.forEach(response.posts, function(post) {
+        $scope.news.push(post);
+
+      });
+
+      if($scope.pagesLoaded >= response.pages){
+
+        $scope.noMoreItemsAvailable=true;
+      }
+      
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+      
+});
+
+
+
+      };
+});
+    });
+
+
+
+
+
+
+
+
+
+
+
+   /*  //definir controlador do feed de instagram
+  a
+
 app.controller('CivrInstagramController', function($scope, $timeout, PersonService) {
   $scope.items = [];
   $scope.newItems = [];
@@ -254,38 +370,6 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
   CheckNewItems();
 });
 
-
-
-
-
-
-
-
-
-
-
-
-   /*  //definir controlador do feed de instagram
-  app.controller('CivrInstagramController', function($http, $scope) {
-
-     $scope.photos = [];
-     $scope.userPhoto= 0;
-     $scope.photoUserReady = 0;
-
-      $http.get("https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df")
-      .success(function(response) {
-
-        angular.forEach(response.data, function(photo){
-          $scope.photos.push(photo);
-         
-
-
-
-
-
-        });
-      });
-});
 
    */
 
@@ -343,14 +427,15 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
       views: {
         //queremos mm esta nav
         'tab-home': {
-          templateUrl:'templates/schedule.html'
+          templateUrl:'templates/schedule.html',
+          controller:'scheduleController'
         }
 
       }
       
     });
 
-     //definir state para o home.schedule view
+     //definir state para o home.access view
     $stateProvider.state('access', {
 
       url: '/access',
@@ -358,6 +443,21 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
         //queremos mm esta nav
         'tab-home': {
           templateUrl:'templates/access.html'
+        }
+
+      }
+      
+    });
+
+    //definir state para o home.access.bancadas view
+    $stateProvider.state('bancadas', {
+
+      url: '/bancadas',
+      views: {
+        //queremos mm esta nav
+        'tab-home': {
+          templateUrl:'templates/bancadas.html',
+          controller:'bancadasController'
         }
 
       }

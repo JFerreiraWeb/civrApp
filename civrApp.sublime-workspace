@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sch",
+				"scheduleController"
+			],
+			[
 				"lodgings",
 				"lodgings"
 			],
@@ -47,7 +51,7 @@
 			"file": "www/templates/home.html",
 			"settings":
 			{
-				"buffer_size": 320,
+				"buffer_size": 815,
 				"line_ending": "Windows"
 			}
 		},
@@ -55,55 +59,39 @@
 			"file": "www/js/app.js",
 			"settings":
 			{
-				"buffer_size": 3464,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/templates/lodgings.html",
-			"settings":
-			{
-				"buffer_size": 598,
+				"buffer_size": 10903,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/templates/info.html",
+			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/lodgings.html",
 			"settings":
 			{
-				"buffer_size": 329,
+				"buffer_size": 744,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/css/style.css",
+			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/instacivrfeed.html",
 			"settings":
 			{
-				"buffer_size": 220,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/templates/maps.html",
-			"settings":
-			{
-				"buffer_size": 601,
+				"buffer_size": 739,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/templates/news.html",
+			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/news.html",
 			"settings":
 			{
-				"buffer_size": 595,
+				"buffer_size": 640,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/templates/results.html",
+			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/apcivr.html",
 			"settings":
 			{
-				"buffer_size": 266,
+				"buffer_size": 1046,
 				"line_ending": "Windows"
 			}
 		}
@@ -132,13 +120,20 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Conquerall/Projects/civrApp/www/js/app.js",
+		"/C/Users/Conquerall/Projects/civrApp/www/templates/schedule.html",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/info.html",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/lodgings.html",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/css/style.css",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/results.html",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/news.html",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/maps.html",
 		"/C/Users/Conquerall/Projects/civrApp/config.xml",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/results.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/news.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/maps.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/lib/angular-moment/angular-moment.js",
 		"/C/Users/Conquerall/Projects/civrApp/www/lib/moment/moment.js",
-		"/C/Users/Conquerall/Projects/civrApp/www/templates/schedule.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/access.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/info.html",
 		"/C/Users/Conquerall/Projects/my-civr/www/lib/moment/moment.js",
@@ -187,7 +182,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -202,8 +197,8 @@
 						"selection":
 						[
 							[
-								477,
-								524
+								760,
+								760
 							]
 						],
 						"settings":
@@ -223,15 +218,15 @@
 					"file": "www/templates/home.html",
 					"settings":
 					{
-						"buffer_size": 320,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26,
-								26
+								0,
+								0
 							]
 						],
 						"settings":
@@ -250,15 +245,15 @@
 					"file": "www/js/app.js",
 					"settings":
 					{
-						"buffer_size": 3464,
+						"buffer_size": 10903,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								839,
-								839
+								1430,
+								1430
 							]
 						],
 						"settings":
@@ -268,30 +263,29 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "www/templates/lodgings.html",
+					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/lodgings.html",
 					"settings":
 					{
-						"buffer_size": 598,
+						"buffer_size": 744,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								142,
-								196
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -304,23 +298,25 @@
 				},
 				{
 					"buffer": 4,
-					"file": "www/templates/info.html",
+					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/instacivrfeed.html",
 					"settings":
 					{
-						"buffer_size": 329,
+						"buffer_size": 739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								302,
-								302
+								739,
+								739
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -330,23 +326,25 @@
 				},
 				{
 					"buffer": 5,
-					"file": "www/css/style.css",
+					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/news.html",
 					"settings":
 					{
-						"buffer_size": 220,
+						"buffer_size": 640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								220,
-								220
+								114,
+								142
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -356,18 +354,18 @@
 				},
 				{
 					"buffer": 6,
-					"file": "www/templates/maps.html",
+					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/apcivr.html",
 					"settings":
 					{
-						"buffer_size": 601,
+						"buffer_size": 1046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								39,
-								39
+								441,
+								441
 							]
 						],
 						"settings":
@@ -375,60 +373,6 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "www/templates/news.html",
-					"settings":
-					{
-						"buffer_size": 595,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								30,
-								30
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "www/templates/results.html",
-					"settings":
-					{
-						"buffer_size": 266,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								149,
-								149
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
