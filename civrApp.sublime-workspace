@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"banc",
+				"bancadasController"
+			],
+			[
+				"photos",
+				"photos"
+			],
+			[
 				"sch",
 				"scheduleController"
 			],
@@ -40,11 +48,43 @@
 	"buffers":
 	[
 		{
-			"file": "www/index.html",
+			"file": "www/templates/schedule.html",
 			"settings":
 			{
-				"buffer_size": 1371,
-				"line_ending": "Unix"
+				"buffer_size": 654,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/instacivrfeed.html",
+			"settings":
+			{
+				"buffer_size": 624,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 13858,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/access.html",
+			"settings":
+			{
+				"buffer_size": 595,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/bancadas.html",
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -56,43 +96,43 @@
 			}
 		},
 		{
-			"file": "www/js/app.js",
+			"file": "www/templates/lodgings.html",
 			"settings":
 			{
-				"buffer_size": 10903,
+				"buffer_size": 695,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/lodgings.html",
+			"file": "www/index.html",
 			"settings":
 			{
-				"buffer_size": 744,
+				"buffer_size": 1541,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/instacivrfeed.html",
+			"file": "www/templates/info.html",
 			"settings":
 			{
-				"buffer_size": 739,
+				"buffer_size": 424,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/news.html",
+			"file": "www/templates/apcivr.html",
 			"settings":
 			{
-				"buffer_size": 640,
+				"buffer_size": 1053,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/apcivr.html",
+			"file": "config.xml",
 			"settings":
 			{
-				"buffer_size": 1046,
-				"line_ending": "Windows"
+				"buffer_size": 5214,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -120,6 +160,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/config.xml",
+		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/apcivr.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/js/app.js",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/schedule.html",
 		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/info.html",
@@ -182,29 +224,29 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 10,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/index.html",
+					"file": "www/templates/schedule.html",
 					"settings":
 					{
-						"buffer_size": 1371,
+						"buffer_size": 654,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								760,
-								760
+								499,
+								499
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -215,24 +257,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "www/templates/home.html",
+					"file": "www/templates/instacivrfeed.html",
 					"settings":
 					{
-						"buffer_size": 815,
+						"buffer_size": 624,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								178,
+								178
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -245,15 +288,15 @@
 					"file": "www/js/app.js",
 					"settings":
 					{
-						"buffer_size": 10903,
+						"buffer_size": 13858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1430,
-								1430
+								13457,
+								13457
 							]
 						],
 						"settings":
@@ -263,17 +306,17 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 8505.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/lodgings.html",
+					"file": "www/templates/access.html",
 					"settings":
 					{
-						"buffer_size": 744,
+						"buffer_size": 595,
 						"regions":
 						{
 						},
@@ -287,7 +330,7 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -298,25 +341,23 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/instacivrfeed.html",
+					"file": "www/templates/bancadas.html",
 					"settings":
 					{
-						"buffer_size": 739,
+						"buffer_size": 852,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								739,
-								739
+								74,
+								82
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -326,18 +367,44 @@
 				},
 				{
 					"buffer": 5,
-					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/news.html",
+					"file": "www/templates/home.html",
 					"settings":
 					{
-						"buffer_size": 640,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								114,
-								142
+								0,
+								815
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "www/templates/lodgings.html",
+					"settings":
+					{
+						"buffer_size": 695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								508,
+								508
 							]
 						],
 						"settings":
@@ -353,24 +420,106 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/C/Users/Conquerall/Projects/civrApp/www/templates/apcivr.html",
+					"buffer": 7,
+					"file": "www/index.html",
 					"settings":
 					{
-						"buffer_size": 1046,
+						"buffer_size": 1541,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								441,
-								441
+								836,
+								836
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "www/templates/info.html",
+					"settings":
+					{
+						"buffer_size": 424,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "www/templates/apcivr.html",
+					"settings":
+					{
+						"buffer_size": 1053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "config.xml",
+					"settings":
+					{
+						"buffer_size": 5214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								847,
+								744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},

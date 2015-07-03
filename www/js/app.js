@@ -51,17 +51,19 @@ $scope.horarioDay3 = 'http://www.elevar.eu/civrApp/horario/day3.pdf';
 
 
  $scope.openLink = function (url, link_type) {
-   console.log(url);
+   
             if (ionic.Platform.isAndroid()) {
 
+                console.log(url);
                 if (link_type !== undefined && link_type !== null) {
                     if (link_type.toLowerCase() !== 'html') {
                         url = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url);
                     }
                 }
             }
+            console.log(url);
 
-            window.open(url, '_blank', 'location=no');
+            window.open(url, '_blank', 'location=yes');
         }
 });
 
@@ -214,7 +216,34 @@ $scope.openLink = function(url){
    app.controller('ContactsController', function($scope) {
 
 
-    $scope.googleMaps = 'http://www.google.pt/maps/place/Av.+Carvalho+Ara%C3%BAjo+7,+5000-651+Vila+Real/@41.2948537,-7.7463567,17z/data=!3m1!4b1!4m2!3m1!1s0xd3b4b06ba992451:0x1bf6f7bd29f595df?hl=en';
+
+     $scope.navigate=function(lat, lng) {
+    // If it's an iPhone..
+    if ((navigator.platform.indexOf("iPhone") !== -1) || (navigator.platform.indexOf("iPod") !== -1)) {
+      function iOSversion() {
+        if (/iP(hone|od|ad)/.test(navigator.platform)) {
+          // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+          var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+          return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+        }
+      }
+      var ver = iOSversion() || [0];
+
+      if (ver[0] >= 6) {
+        protocol = 'maps://';
+      } else {
+        protocol = 'http://';
+
+      }
+      window.location = protocol + 'maps.apple.com/maps?daddr=' + lat + ',' + lng + '&amp;ll=';
+    }
+    else {
+      window.open('http://maps.google.com?daddr=' + lat + ',' + lng + '&amp;ll=', '_blank','location=no');
+    }
+  }
+
+
+    
     $scope.civrTwitter = 'http://twitter.com/CIVROFICIAL';
     $scope.civrFacebook = 'http://www.facebook.com/Circuito.Internacional.de.Vila.Real.Oficial';
     $scope.civrInstagram = 'http://instagram.com/circuitovilareal/';
@@ -235,6 +264,7 @@ app.controller('bancadasController', function($scope) {
     // If it's an iPhone..
     if ((navigator.platform.indexOf("iPhone") !== -1) || (navigator.platform.indexOf("iPod") !== -1)) {
       function iOSversion() {
+        alert('estou aqui!');
         if (/iP(hone|od|ad)/.test(navigator.platform)) {
           // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
           var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
@@ -377,7 +407,10 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
 
 
 //passar o nosso config que utiliza stateprovider e urlrouterprovider utilizados para nav
-  app.config(function($stateProvider, $urlRouterProvider){
+  app.config(function($stateProvider, $urlRouterProvider, $compileProvider){
+
+
+    $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
 //definir state para o home view
     $stateProvider.state('home', {
 
@@ -552,6 +585,10 @@ app.controller('CivrInstagramController', function($scope, $timeout, PersonServi
 //se nao houver correspondencia de state muda o state para /home view
     $urlRouterProvider.otherwise('/home');
   });
+
+app.config(['$compileProvider', function($compileProvider) {
+            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content|http):|data:image\//);
+        }]);
 
 
 
