@@ -4,16 +4,8 @@
 		"selected_items":
 		[
 			[
-				"banc",
-				"bancadasController"
-			],
-			[
-				"photos",
-				"photos"
-			],
-			[
-				"sch",
-				"scheduleController"
+				"align",
+				"vertical-align"
 			],
 			[
 				"lodgings",
@@ -48,42 +40,10 @@
 	"buffers":
 	[
 		{
-			"file": "www/templates/schedule.html",
+			"file": "www/index.html",
 			"settings":
 			{
-				"buffer_size": 654,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/templates/instacivrfeed.html",
-			"settings":
-			{
-				"buffer_size": 624,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/js/app.js",
-			"settings":
-			{
-				"buffer_size": 13858,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/templates/access.html",
-			"settings":
-			{
-				"buffer_size": 595,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/templates/bancadas.html",
-			"settings":
-			{
-				"buffer_size": 852,
+				"buffer_size": 1541,
 				"line_ending": "Windows"
 			}
 		},
@@ -96,6 +56,14 @@
 			}
 		},
 		{
+			"file": "www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 13858,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "www/templates/lodgings.html",
 			"settings":
 			{
@@ -104,35 +72,54 @@
 			}
 		},
 		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 1541,
-				"line_ending": "Windows"
-			}
-		},
-		{
+			"contents": "<ion-view view-title=\"Contactos\">\n<ion-content class=\"padding\">\n\n<a href=\"#/lodgings\" class=\"button button-block item-icon-right\">Alojamento<i class=\"icon ion-ios-home\"></i></a>\n<a href=\"#/restaurants\" class=\"button button-block item-icon-right\">Restaurantes<i class=\"icon ion-fork\"></i></a>\n<a href=\"#/apcivr\" class=\"button button-block item-icon-right\">Ajuda<i class=\"icon ion-help\"></i></a>\n\n\n</ion-content>\n</ion-view>",
 			"file": "www/templates/info.html",
+			"file_size": 435,
+			"file_write_time": 130801309430827403,
 			"settings":
 			{
-				"buffer_size": 424,
+				"buffer_size": 422,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/templates/apcivr.html",
+			"file": "www/css/style.css",
 			"settings":
 			{
-				"buffer_size": 1053,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config.xml",
-			"settings":
-			{
-				"buffer_size": 5214,
+				"buffer_size": 287,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/templates/instacivrfeed.html",
+			"settings":
+			{
+				"buffer_size": 624,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/maps.html",
+			"settings":
+			{
+				"buffer_size": 578,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/news.html",
+			"settings":
+			{
+				"buffer_size": 640,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/templates/results.html",
+			"settings":
+			{
+				"buffer_size": 266,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -160,22 +147,13 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/config.xml",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/apcivr.html",
-		"/C/Users/Conquerall/Projects/civrApp/www/js/app.js",
-		"/C/Users/Conquerall/Projects/civrApp/www/templates/schedule.html",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/info.html",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/lodgings.html",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/css/style.css",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/results.html",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/news.html",
-		"/C/Users/Conquerall/Documents/GitHub/civrApp/civrApp/www/templates/maps.html",
 		"/C/Users/Conquerall/Projects/civrApp/config.xml",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/results.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/news.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/maps.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/lib/angular-moment/angular-moment.js",
 		"/C/Users/Conquerall/Projects/civrApp/www/lib/moment/moment.js",
+		"/C/Users/Conquerall/Projects/civrApp/www/templates/schedule.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/access.html",
 		"/C/Users/Conquerall/Projects/civrApp/www/templates/info.html",
 		"/C/Users/Conquerall/Projects/my-civr/www/lib/moment/moment.js",
@@ -196,6 +174,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\Users\\Conquerall\\Documents\\GitHub\\civrApp\\www\\templates\\"
 		]
 	},
 	"find_state":
@@ -203,6 +182,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"photo",
+			"item",
+			"data",
+			"loadMore",
+			"doRefresh",
+			"items",
+			".results",
+			"civr",
 			"lodgings",
 			"ago",
 			"map",
@@ -224,29 +211,29 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/templates/schedule.html",
+					"file": "www/index.html",
 					"settings":
 					{
-						"buffer_size": 654,
+						"buffer_size": 1541,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								499,
-								499
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -257,25 +244,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "www/templates/instacivrfeed.html",
+					"file": "www/templates/home.html",
 					"settings":
 					{
-						"buffer_size": 624,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								178,
-								178
+								803,
+								803
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -295,8 +281,8 @@
 						"selection":
 						[
 							[
-								13457,
-								13457
+								0,
+								0
 							]
 						],
 						"settings":
@@ -306,17 +292,17 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8505.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "www/templates/access.html",
+					"file": "www/templates/lodgings.html",
 					"settings":
 					{
-						"buffer_size": 595,
+						"buffer_size": 695,
 						"regions":
 						{
 						},
@@ -329,8 +315,9 @@
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -341,18 +328,18 @@
 				},
 				{
 					"buffer": 4,
-					"file": "www/templates/bancadas.html",
+					"file": "www/templates/info.html",
 					"settings":
 					{
-						"buffer_size": 852,
+						"buffer_size": 422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								74,
-								82
+								31,
+								31
 							]
 						],
 						"settings":
@@ -367,10 +354,36 @@
 				},
 				{
 					"buffer": 5,
-					"file": "www/templates/home.html",
+					"file": "www/css/style.css",
 					"settings":
 					{
-						"buffer_size": 815,
+						"buffer_size": 287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								283,
+								283
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 221.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "www/templates/instacivrfeed.html",
+					"settings":
+					{
+						"buffer_size": 624,
 						"regions":
 						{
 						},
@@ -378,33 +391,7 @@
 						[
 							[
 								0,
-								815
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "www/templates/lodgings.html",
-					"settings":
-					{
-						"buffer_size": 695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								508,
-								508
+								0
 							]
 						],
 						"settings":
@@ -421,38 +408,10 @@
 				},
 				{
 					"buffer": 7,
-					"file": "www/index.html",
+					"file": "www/templates/maps.html",
 					"settings":
 					{
-						"buffer_size": 1541,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								836,
-								836
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "www/templates/info.html",
-					"settings":
-					{
-						"buffer_size": 424,
+						"buffer_size": 578,
 						"regions":
 						{
 						},
@@ -465,7 +424,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -474,19 +435,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "www/templates/apcivr.html",
+					"buffer": 8,
+					"file": "www/templates/news.html",
 					"settings":
 					{
-						"buffer_size": 1053,
+						"buffer_size": 640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								589,
-								589
+								0,
+								0
 							]
 						],
 						"settings":
@@ -502,26 +463,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "config.xml",
+					"buffer": 9,
+					"file": "www/templates/results.html",
 					"settings":
 					{
-						"buffer_size": 5214,
+						"buffer_size": 266,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								847,
-								744
+								149,
+								149
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
