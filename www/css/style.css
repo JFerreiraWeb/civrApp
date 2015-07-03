@@ -28,3 +28,21 @@ p.newResumo {
 
 	width:60%;
 }
+body {
+    background: 
+url(../img/home.png) no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+
+}
+
+body .view-container.tab-content {
+  background-color: transparent;
+}
+
+body .pane, .menu, .view, .list, .item       {
+    background: transparent;
+}
+.bar .bar-stable{
+	background-color:#112036;
+}
