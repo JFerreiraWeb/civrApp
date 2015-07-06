@@ -1,0 +1,29 @@
+<ion-view view-title="Bancada">
+<div class="modal" >
+              <header class="bar bar-header bar-positive">
+              <h1 class="title">{{data.title}}</h1>
+              <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
+              </header>
+              <ion-content has-header="true" padding="true" >
+                <div class="list card">
+                <div class="item item-body" >
+                <img ng-src="{{data.selected}}" style="display:block; width:100%; margin:auto"/>
+                <div data-ng-bind-html="data.content" class="item item-text-wrap">
+              </div>
+              <div class="button-bar">
+              <a ng-click="navigate(data.lat, data.lng)" class="button button-large icon-right ion-location button-positive">
+               Localizar
+              </a>
+              <div class="padding"></div>
+              <a ng-click="closeModal()" class="button button-large icon-right ion-close  button-positive">
+               Fechar
+              </a>
+            </div>
+              </div>
+            </div>
+              </ion-content>    
+            </div>
+</ion-view>
+
+
+

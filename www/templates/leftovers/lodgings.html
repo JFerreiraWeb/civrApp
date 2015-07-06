@@ -25,10 +25,31 @@
 
 
 
+ $ionicPopup.confirm({
+                        title: "Dispositivo Offline!",
+                        content: "Ligue o seu dispositivo à internet para ter acesso a todo o conteúdo!"
+                    })
+                    .then(function(result) {
+                        if(!result) {
+                            ionic.Platform.exitApp();
+                        }
+                        $ionicPopup.close();
+                    });
 
 
-
-
+if(window.Connection) {
+                if(navigator.connection.type == Connection.NONE) {
+                    $ionicPopup.confirm({
+                        title: "Dispositivo Offline!",
+                        content: "Ligue o seu dispositivo à internet para ter acesso a todo o conteúdo"
+                    })
+                    .then(function(result) {
+                        if(!result) {
+                            ionic.Platform.exitApp();
+                        }
+                    });
+                };
+              }
 
 
 
@@ -100,3 +121,144 @@ app.controller('LoadMoreLodgingCtrl', function($scope, $http) {
 
 
           });
+
+            <script>
+      console.log($scope.bancada.custom_fields.client_position);
+      var div = document.getElementById('divID');
+
+    if(!{{bancada.custom_fields.client_position}}){
+
+      div.innerHTML = div.innerHTML + '<i class="icon ion-monitor"></i>';
+    }
+
+  </script>
+
+  <a class="item item-icon-right" href="#/estacionamentos">
+        <h2 class="mapTitle">Estacionamentos</h2>
+        <i class="icon ion-chevron-right"></i>
+    </a>
+    <a class="item item-icon-right" href="#/saidas">
+        <h2 class="mapTitle">Saídas/Entradas</h2>
+        <i class="icon ion-chevron-right"></i>
+    </a>
+
+
+    GetNewPhotos: function() {
+        return $http.get(BASE_URL + '&min_tag_id=' + NewInsta).then(function(response) {
+
+
+          items = response.data.data;
+          NewInsta = response.data.pagination.min_tag_id;
+
+
+
+          return items;
+        });
+      },
+      GetOldPhotos: function() {
+        return $http.get(BASE_URL + '&max_tag_id=' + nextUrl).then(function(response) {
+
+          nextUrl = response.data.pagination.next_max_tag_id;
+          items = response.data.data;
+
+
+          return items;
+
+        });
+      }
+      
+    GetNewPhotos: function() {
+        return $http.get(BASE_URL + '&min_tag_id=' + NewInsta).then(function(response) {
+
+
+          items = response.data.data;
+          if(response.data.data.length > 0){
+            NewInsta = response.data.pagination.min_tag_id;
+          }
+
+          return items;
+        });
+      },
+      GetOldPhotos: function() {
+        return $http.get(BASE_URL + '&max_tag_id=' + nextUrl).then(function(response) {
+
+          if(response.data.data.length > 0){
+            nextUrl = response.data.pagination.next_max_tag_id;
+          }
+          
+          items = response.data.data;
+
+
+          return items;
+
+        });
+      }
+var nextUrl = 0;
+    var NewInsta = 0;
+
+    return {
+      GetFeed: function() {
+        return $http.get(BASE_URL).then(function(response) {
+
+          items = response.data.data;
+          nextUrl = response.data.pagination.next_max_tag_id;
+          NewInsta = response.data.pagination.min_tag_id;
+
+
+          return items;
+
+        });
+      },
+      GetNewPhotos: function() {
+        return $http.get(BASE_URL + '&min_tag_id=' + NewInsta).then(function(response) {
+
+          items = response.data.data;
+          if(response.data.data.length > 0){
+            NewInsta = response.data.pagination.min_tag_id;
+          }
+
+          return items;
+
+        });
+      },
+      GetOldPhotos: function() {
+        return $http.get(BASE_URL + '&max_tag_id=' + nextUrl).then(function(response) {
+
+          if(response.data.data.length > 0){
+            nextUrl = response.data.pagination.next_max_tag_id;
+          }
+          
+          items = response.data.data;
+
+
+          return items;
+
+        });
+      }
+    }
+  });
+
+
+<div class="list card">
+<ion-item ng-if="newItems.length > 0" ng-click="doRefresh()">
+{{newItems.length}} new items
+</ion-item>
+<ion-item class="item item-avatar" ng-repeat="item in items track by item.id">
+
+    <img ng-src="{{item.user.profile_picture}}">
+    <h2>{{item.user.username}}</h2>
+    <p><span am-time-ago="item.created_time" am-preprocess="unix"></span></p>
+
+    <ion-item class="item item-body" >
+    <img ng-src="{{item.images.standard_resolution.url}}">
+    <p>
+      {{item.caption.text}}
+    </p>
+    <p>
+      <a href="#" class="subdued">{{item.likes.count}} Likes</a>
+      <a href="#" class="subdued">{{item.comments.count}} Comments</a>
+    </p>
+    </ion-item>
+    </ion-item>
+  
+</div>

@@ -1,4 +1,12 @@
 {
   "name": "civrApp",
-  "app_id": ""
+  "app_id": "54867473",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

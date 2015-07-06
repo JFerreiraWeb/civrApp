@@ -2,11 +2,11 @@
 <ion-content>
 
       <div class="list">
-      <a class="item item-thumbnail-left item-icon-right" ng-href="tel:{{restaurant.custom_fields.client_name}}" ng-repeat="restaurant in restaurants track by restaurant.id">
+      <a class="item item-thumbnail-left item-icon-right" ng-href="tel:{{restaurant.custom_fields.client_name.toString()}}" collection-repeat="restaurant in restaurants track by restaurant.id">
         
         
         
-        <img ng-src="{{restaurant.thumbnail}}" ng-if="restaurant.thumbnail.startsWith('http')">
+        <img ng-src="{{restaurant.thumbnail}}">
         
         <h2 class="lodgingTitle">{{restaurant.title}}</h2>
         <i class="icon ion-ios-telephone"></i>
@@ -15,7 +15,8 @@
     </a>
     
     </div>
-      <ion-infinite-scroll ng-if="!noMoreItemsAvailable"
+      <ion-infinite-scroll 
+        ng-if="!noMoreItemsAvailable"
         on-infinite="loadMoreRestaurants()"
         distance="1%">
       </ion-infinite-scroll>

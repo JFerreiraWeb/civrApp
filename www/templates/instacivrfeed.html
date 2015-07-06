@@ -1,23 +1,27 @@
 <ion-view view-title="#CircuitoVilaReal">
 <ion-content>
-<div class="list card" ng-repeat="photo in photos track by photo.id">
+<ion-refresher refreshing-text="Refreshing.." on-refresh="doRefresh()" ></ion-refresher>
+<div class="item item-icon-left" ng-if="newItems.length > 0" ng-click="doRefresh()">
+    {{newItems.length}} Novas fotos!<i class="icon ion-refresh"></i>
+  </div>
+<div class="list card" ng-repeat="item in items track by item.id">
   <div class="item item-avatar">
-    <img ng-src="{{photo.user.profile_picture}}">
-    <h2>{{photo.user.full_name}}</h2>
-    <p><span am-time-ago="photo.created_time" am-preprocess="unix"></span></p>
+    <img ng-src="{{item.user.profile_picture}}">
+    <h2>{{item.user.username}}</h2>
+    <p><span am-time-ago="item.created_time" am-preprocess="unix"></span></p>
   </div>
 
   <div class="item item-body" >
-    <img ng-src="{{photo.images.low_resolution.url}}">
+    <img ng-src="{{item.images.low_resolution.url}}">
     <p>
-      {{photo.caption.text}}
+      {{item.caption.text}}
     </p>
     <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
+      <a href="#" class="subdued">{{item.likes.count}} Likes</a>
+      <a href="#" class="subdued">{{item.comments.count}} Comments</a>
     </p>
   </div>
-
 </div>
+<ion-infinite-scroll immediate-check="false" on-infinite="loadMore()" distance="5%" ng-if="!noMoreItemsAvailable"></ion-infinite-scroll>
 </ion-content>
 </ion-view>

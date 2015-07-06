@@ -17,32 +17,56 @@ p.newResumo {
 
 	height:3.6em;
 }
-.iframe-wrapper iframe {
-   width: 100%;
-   height: 100%;
- }
- .item-body img {
- 	width:100%;
- }
-.button-outline{
+.iframe-wrapper iframe {width: 100%;height: 100%;}
+.item-body img {width:100%;}
+.button-outline{width:60%;}
+.bar .bar-stable{background-color:#112036;}
+.button.button-assertive.button-outline {border-color:#112036;color:#112036;}
 
-	width:60%;
-}
-body {
-    background: 
-url(../img/home.png) no-repeat;
-    background-attachment:fixed;
-    background-position: center;
+.slide-in-right {
+  -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
 
+.slide-in-right.ng-enter, .slide-in-right > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
+
+.slide-in-right.ng-enter-active, .slide-in-right > .ng-enter-active {
+  -webkit-transform: translateX(0);
+    transform: translateX(0); }
+
+.slide-in-right.ng-leave, .slide-in-right > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
+.modal .scroll {
+  height: 100% !important;
+  background-color: transparent !important;
+   display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    
+   -webkit-box-direction: normal !important;
+    -moz-box-direction: normal !important;
+    -webkit-box-orient: horizontal !important;
+    -moz-box-orient: horizontal !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+   
+
+    -webkit-box-align: center !important;
+    -moz-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important; 
+}
+.scroll-content{
+ background: url(../img/home.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-body .view-container.tab-content {
-  background-color: transparent;
-}
-
-body .pane, .menu, .view, .list, .item       {
-    background: transparent;
-}
-.bar .bar-stable{
-	background-color:#112036;
-}

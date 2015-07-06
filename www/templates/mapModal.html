@@ -1,0 +1,27 @@
+<ion-view view-title="Mapa">
+<div class="modal" >
+              <header class="bar bar-header bar-positive">
+              <h1 class="title">{{data.title}}</h1>
+              <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
+              </header>
+              <ion-content has-header="true" padding="true" >
+              <div class="padding"></div>
+                <div class="list card">
+                <div class="item item-body" >
+                <img ng-src="{{data.selected}}" style="display:block; width:100%; margin:auto"/>
+                <div data-ng-bind-html="data.content" style="text-align:justify" class="item item-text-wrap">
+              </div>
+              <div class="button-bar">
+              <a ng-click="closeModal()" class="button button-large icon-right ion-close  button-positive">
+               Fechar
+              </a>
+            </div>
+              </div>
+            </div>
+              </ion-content>
+              
+            </div>
+
+</div>
+</ion-view>
+

@@ -1,9 +1,10 @@
 <ion-view view-title="Notícias">
 <ion-content>
       <div class="list">
-      <a class="item item-thumbnail-left" ng-click="openLink(new.url)" ng-repeat="new in news track by new.id">
-        <img ng-src="{{new.thumbnail}}" ng-if="new.thumbnail.startsWith('http')">
+      <a class="item item-thumbnail-left item-icon-right" ng-click="openModal(new)" ng-repeat="new in news track by new.id">
+        <img ng-src="{{new.thumbnail}}">
         <h2 class="newTitle">{{new.title}}</h2>
+        <i class="icon ion-more"></i>
          <div data-ng-bind-html="new.excerpt" class="newResumo"></div>
          <p><span am-time-ago="new.date"></span></p>
     </a>
