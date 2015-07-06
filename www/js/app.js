@@ -35,11 +35,7 @@ app.factory('PhotoService', function($http, $q) {
         });
       },
       
-      /**
-       * Always returns a promise object. If there is a nextUrl, 
-       * the promise object will resolve with new instragram results, 
-       * otherwise it will always be resolved with [].
-       **/
+      
       GetOldPhotos: function() {
         if (typeof nextUrl != "undefined") {
           return $http.jsonp(BASE_URL + '&max_tag_id=' + nextUrl).then(function(response) {
@@ -65,8 +61,6 @@ app.factory('PhotoService', function($http, $q) {
   });
 
 
-
-//definir controlador dos horarios
 app.controller('scheduleController', function($http, $scope, $ionicModal) {
 
 
@@ -90,7 +84,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
     scope: $scope,
     animation: 'slide-in-right'
   });
-  // open video modal
+  
   $scope.openModal = function(selected) {
     $scope.data.selected = selected.thumbnail_images.large.url;
     $scope.data.title = selected.title;
@@ -120,7 +114,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
    
 
 
-  //definir controlador dos mapas
+  
   app.controller('MapsController', function($http, $scope, $ionicModal) {
   $scope.data = {};
   $scope.maps = [];
@@ -139,7 +133,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
     scope: $scope,
     animation: 'slide-in-right'
   });
-  // open video modal
+  
   $scope.openModal = function(selected) {
     $scope.data.selected = selected.thumbnail_images.large.url;
     $scope.data.title = selected.title;
@@ -163,7 +157,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
 
 
 
-  //definir controlador dos alojamentos
+  
   app.controller('LodgingController', function($http, $scope) {
 
     $scope.page=1;
@@ -200,7 +194,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
   };
 });
 
-//definir controlador dos restaurantes
+
   app.controller('RestaurantController', function($http, $scope) {
 
   
@@ -250,7 +244,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
   });
 
 
- //definir controlador das news
+ 
    app.controller('NewsController', function($http, $scope, $ionicModal) {
   
   $scope.news = [];
@@ -362,7 +356,7 @@ $ionicModal.fromTemplateUrl('templates/scheduleModal.html', function(modal) {
   });
 
 
-//definir controlador das bancadas
+
 app.controller('bancadasController', function($http, $scope, $ionicModal) {
 
 $scope.data = {};
@@ -510,7 +504,7 @@ $ionicModal.fromTemplateUrl('templates/bancadaModal.html', function(modal) {
 
 
 
-//passar o nosso config que utiliza stateprovider e urlrouterprovider utilizados para nav
+
   app.config(function($stateProvider, $urlRouterProvider, $compileProvider, $ionicConfigProvider){
 
     $ionicConfigProvider.tabs.position('bottom');
@@ -518,7 +512,7 @@ $ionicModal.fromTemplateUrl('templates/bancadaModal.html', function(modal) {
 
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|tel|ftp|mailto|file|ghttps?|ms-appx|x-wmapp0):/);
     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
-//definir state para o home view
+
     $stateProvider.state('home', {
 
       url: '/home',
