@@ -9,8 +9,6 @@
     </author>
   <content src="index.html"/>
   <access origin="*"/>
-  <allow-intent href="*" />
-  <allow-navigation href="*" />
   <access origin="tel:*" launch-external="yes"/>
   <access origin="geo:*" launch-external="yes"/>
   <access origin="mailto:*" launch-external="yes"/>
@@ -19,13 +17,15 @@
   <access origin="https://*" launch-external="yes"/>
   <access origin="http://*" launch-external="yes"/>
   <access uri="*" subdomains="true"/>
+  <allow-intent href="*"/>
+  <allow-navigation href="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="1000"/>
+  <preference name="SplashScreenDelay" value="3000"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
@@ -77,5 +77,8 @@
     <splash src="resources\ios\splash\Default@2x~iphone.png" width="640" height="960"/>
     <splash src="resources\ios\splash\Default~iphone.png" width="320" height="480"/>
   </platform>
+  <preference name="AutoHideSplashScreen" value="false"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000" />
   <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
 </widget>
