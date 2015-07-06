@@ -4,7 +4,7 @@
   var app = angular.module('app', ['ionic','angularMoment']);
 
 app.factory('PhotoService', function($http, $q) {
-    var BASE_URL = "https://api.instagram.com/v1/tags/chocolat/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df&callback=JSON_CALLBACK";
+    var BASE_URL = "https://api.instagram.com/v1/tags/circuitovilareal/media/recent?access_token=1368360108.119d058.c88a3bdad63f4c6e923eb96b9db732df&callback=JSON_CALLBACK";
     var items = [];
      var nextUrl = 0;  // next max tag id - for fetching older photos
     var NewInsta = 0; // min tag id - for fetching newer photos
@@ -499,7 +499,7 @@ $ionicModal.fromTemplateUrl('templates/bancadaModal.html', function(modal) {
       
         CheckNewItems();
       });
-    },60000);
+    },30000);
    }
   
   CheckNewItems();
@@ -713,12 +713,7 @@ app.run(function($ionicPlatform) {
 
 
               });
-              document.addEventListener("online", function(){
-
-               alert("Dispositivo Online! Já pode aceder a todos os conteúdos.")
-
-
-              });
+             
   });
 });
 }());

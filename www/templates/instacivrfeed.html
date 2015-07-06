@@ -5,17 +5,17 @@
     {{newItems.length}} Novas fotos!<i class="icon ion-refresh"></i>
   </div>
 <div class="list card" ng-repeat="item in items track by item.id">
-  <div class="item item-avatar">
+  <div class="item item-avatar custom_item">
     <img ng-src="{{item.user.profile_picture}}">
     <h2>{{item.user.username}}</h2>
     <p><span am-time-ago="item.created_time" am-preprocess="unix"></span></p>
   </div>
 
-  <div class="item item-body" >
+  <div class="item item-body custom_item" >
     <img ng-src="{{item.images.low_resolution.url}}">
-    <p>
+    <a class="subdued">
       {{item.caption.text}}
-    </p>
+    </a>
     <p>
       <a href="#" class="subdued">{{item.likes.count}} Likes</a>
       <a href="#" class="subdued">{{item.comments.count}} Comments</a>

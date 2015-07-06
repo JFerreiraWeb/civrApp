@@ -4,7 +4,7 @@
       <a class="item item-thumbnail-left item-icon-right" ng-click="openModal(map)" ng-repeat="map in maps track by map.id">
         <img ng-src="{{map.thumbnail}}">
         <h2 class="mapTitle">{{map.title}}</h2>
-        <i class="icon ion-more"></i>
+        <i class="icon ion-more custom_icon"></i>
          <div data-ng-bind-html="map.excerpt" class="resumo"></div>
          <p><span am-time-ago="map.date"></span></p>
     </a>
